@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const adapter = new JSONFile(path.join(__dirname, '..', '..', 'db.json'));
-const defaultData = { products: [], logs: [] };
+const defaultData = { products: [], logs: [], profiles: {} };
 const db = new Low(adapter, defaultData);
 
 await db.read();

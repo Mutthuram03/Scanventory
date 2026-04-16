@@ -6,7 +6,22 @@ import ProductManagement from './pages/ProductManagement';
 import BarcodeScanner from './pages/BarcodeScanner';
 import LogsHistory from './pages/LogsHistory';
 import Categories from './pages/Categories';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import * as api from './services/api';
+
+const ProtectedRoute = ({ children }) => {
+  const { user, loading } = useAuth();
+
+  if (loading) return null; // Or a loading spinner
+
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return <AppShell>{children}</AppShell>;
+};
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -26,12 +41,13 @@ function App() {
   };
 
   useEffect(() => {
-    fetchData();
+    // We'll fetch data after auth is ready and user exists
+    // But for now, let's keep it here and let api interceptor handle tokens
   }, []);
 
   const handleScan = async (scanData) => {
     const response = await api.scanBarcode(scanData);
-    await fetchData(); 
+    await fetchData();
     return response;
   };
 
@@ -42,46 +58,73 @@ function App() {
   const productById = useMemo(() => new Map(products.map((p) => [p.id, p])), [products]);
 
   return (
-    <Router>
-      <AppShell>
+    <AuthProvider>
+      <Router>
         <Routes>
-          <Route 
-            path="/" 
+          <Route path="/login" element={<Login />} />
+
+          <Route
+            path="/"
             element={
-              <Dashboard 
-                products={products} 
-                logs={logs} 
-                loading={loading} 
-                productById={productById} 
-              />
-            } 
+              <ProtectedRoute>
+                <Dashboard
+                  products={products}
+                  logs={logs}
+                  loading={loading}
+                  productById={productById}
+                  refreshData={fetchData}
+                />
+              </ProtectedRoute>
+            }
           />
-          <Route 
-            path="/products" 
+          <Route
+            path="/products"
             element={
-              <ProductManagement 
-                products={products} 
-                onProductChange={handleProductChange} 
-                productById={productById} 
-              />
-            } 
+              <ProtectedRoute>
+                <ProductManagement
+                  products={products}
+                  onProductChange={handleProductChange}
+                  productById={productById}
+                />
+              </ProtectedRoute>
+            }
           />
-          <Route 
-            path="/scan" 
-            element={<BarcodeScanner products={products} onScan={handleScan} />} 
+          <Route
+            path="/scan"
+            element={
+              <ProtectedRoute>
+                <BarcodeScanner products={products} onScan={handleScan} />
+              </ProtectedRoute>
+            }
           />
-          <Route 
-            path="/history" 
-            element={<LogsHistory logs={logs} productById={productById} />} 
+          <Route
+            path="/history"
+            element={
+              <ProtectedRoute>
+                <LogsHistory logs={logs} productById={productById} />
+              </ProtectedRoute>
+            }
           />
-          <Route 
-            path="/categories" 
-            element={<Categories products={products} loading={loading} />} 
+          <Route
+            path="/categories"
+            element={
+              <ProtectedRoute>
+                <Categories products={products} loading={loading} />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </AppShell>
-    </Router>
+      </Router>
+    </AuthProvider>
   );
 }
 

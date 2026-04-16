@@ -4,7 +4,7 @@
   "description": "A simple inventory management system with barcode scanning.",
   "main": "backend/index.js",
   "scripts": {
-    "start": "node backend/index.js",
+    "start": "concurrently \"node backend/index.js\" \"npm run --prefix frontend dev\"",
     "dev:backend": "nodemon backend/index.js",
     "dev:frontend": "npm run --prefix frontend dev",
     "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
