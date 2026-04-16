@@ -66,12 +66,7 @@ const Landing = () => {
               >
                 About
               </button>
-              <button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-                className="hover:text-primary transition-colors"
-                >
-                Contact
-              </button>
+              <a href="mailto:support@scanventory.com" className="hover:text-primary transition-colors">Contact</a>
             </div>
 
             <div className="flex items-center gap-4">
@@ -180,27 +175,18 @@ const Landing = () => {
           </div>
         </section>
 
-        {/* Call to Action & Contact */}
-        <section id="contact" className="py-20 text-center">
+        <section className="py-20 text-center">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-950">Ready to optimize your warehouse?</h2>
             <p className="text-slate-600 text-lg mb-10 max-w-xl mx-auto font-medium leading-relaxed">
               Join hundreds of industries that trust Scanventory for their day-to-day stock management operations.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button 
-                onClick={() => navigate('/login')}
-                className="w-full sm:w-auto bg-primary text-white text-lg font-bold px-12 py-4 rounded-2xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/25"
-              >
-                Get Started for Free
-              </button>
-              <a 
-                href="mailto:support@scanventory.com"
-                className="w-full sm:w-auto bg-white text-slate-700 text-lg font-bold px-12 py-4 rounded-2xl border border-slate-200 hover:bg-slate-50 transition-all"
-              >
-                Contact Sales
-              </a>
-            </div>
+            <button 
+              onClick={() => navigate('/login')}
+              className="bg-primary text-white text-lg font-bold px-12 py-4 rounded-2xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/25"
+            >
+              Get Started for Free
+            </button>
           </div>
         </section>
 
@@ -277,8 +263,8 @@ const Landing = () => {
             <div>
               <h5 className="text-white font-bold mb-6">Company</h5>
               <ul className="space-y-4">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">About</button></li>
+                <li><a href="mailto:support@scanventory.com" className="hover:text-white transition-colors">Contact</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
               </ul>
