@@ -9,8 +9,9 @@ import Categories from './pages/Categories';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Landing from './pages/Landing';
+import Contact from './pages/Contact';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import * as api from './services/api';
+export * as api from './services/api'; 
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -71,6 +72,7 @@ const ScanventoryInternal = () => {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Landing />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         
         {/* App Routes (Protected) */}
