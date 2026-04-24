@@ -52,9 +52,9 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="Scanventory Logo" className="w-10 h-10 object-contain" />
+              <img src="/logo.png" alt="Inventro Logo" className="w-10 h-10 object-contain" />
               <span className="text-xl font-bold tracking-tight text-slate-950">
-                Scan<span className="text-primary font-extrabold">ventory</span>
+                Inven<span className="text-primary font-extrabold">tro</span>
               </span>
             </div>
             
@@ -184,7 +184,7 @@ const Landing = () => {
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-950">Ready to optimize your warehouse?</h2>
             <p className="text-slate-600 text-lg mb-10 max-w-xl mx-auto font-medium leading-relaxed">
-              Join hundreds of industries that trust Scanventory for their day-to-day stock management operations.
+              Join hundreds of industries that trust Inventro for their day-to-day stock management operations.
             </p>
             <button 
               onClick={() => navigate('/login')}
@@ -205,7 +205,7 @@ const Landing = () => {
                   Empowering businesses through smart scanning.
                 </h3>
                 <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                  Scanventory was born from a simple need: making inventory tracking as easy as taking a photo. We've built a platform that eliminates manual entry errors and provides real-time visibility into your warehouse operations.
+                  Inventro was born from a simple need: making inventory tracking as easy as taking a photo. We've built a platform that eliminates manual entry errors and provides real-time visibility into your warehouse operations.
                 </p>
                 <div className="flex items-center justify-center md:justify-start gap-4">
                    <div className="text-center group">
@@ -221,7 +221,7 @@ const Landing = () => {
               </div>
               <div className="relative group flex items-center justify-center">
                  <div className="absolute -inset-10 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
-                 <img src="/logo.png" alt="Scanventory Vision" className="w-64 h-64 object-contain relative z-10 hover:scale-105 transition-transform duration-500" />
+                 <img src="/logo.png" alt="Inventro Vision" className="w-64 h-64 object-contain relative z-10 hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
           </div>
@@ -234,9 +234,9 @@ const Landing = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2 mb-6">
-                <img src="/logo.png" alt="Scanventory Logo" className="w-10 h-10 object-contain brightness-0 invert" />
+                <img src="/logo.png" alt="Inventro Logo" className="w-10 h-10 object-contain brightness-0 invert" />
                 <span className="text-2xl font-bold tracking-tight text-white leading-none">
-                  Scan<span className="text-primary font-extrabold">ventory</span>
+                  Inven<span className="text-primary font-extrabold">tro</span>
                 </span>
               </div>
               <p className="max-w-sm mb-8">
@@ -284,7 +284,7 @@ const Landing = () => {
           </div>
           
           <div className="pt-8 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>© 2026 Scanventory. All rights reserved.</p>
+            <p>© 2026 Inventro. All rights reserved.</p>
             <p>Built with ❤️ for modern warehouses.</p>
           </div>
         </div>
