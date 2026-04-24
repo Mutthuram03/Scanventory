@@ -6,8 +6,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
 
-![Inventro Banner](file:///C:/Users/srmut/.gemini/antigravity/brain/eb3eb2c4-74aa-4860-acdd-2ae3fef030a8/inventro_banner_1777046551723.png)
-
 **Inventro** is a premium, full-stack inventory management solution designed for modern warehouses and retail operations. It combines high-end aesthetics with powerful barcode scanning capabilities to eliminate manual entry errors and provide real-time visibility into stock operations.
 
 ## ✨ Features
