@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2 group cursor-pointer" onClick={() => navigate('/')}>
             <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform" />
             <span className="text-xl font-bold tracking-tight text-slate-950">
-              Scan<span className="text-primary font-extrabold">ventory</span>
+              Inven<span className="text-primary font-extrabold">tro</span>
             </span>
           </div>
 
