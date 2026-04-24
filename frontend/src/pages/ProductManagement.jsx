@@ -41,15 +41,20 @@ const ProductManagement = ({ products, onProductChange }) => {
     productData.quantity = parseInt(productData.quantity, 10);
     productData.price = parseFloat(productData.price);
 
-    if (editingProduct) {
-      await api.updateProduct(editingProduct.id, productData);
-    } else {
-      // Provide a unique ID from frontend if backend allows
-      productData.id = uuidv4();
-      await api.createProduct(productData);
+    try {
+      if (editingProduct) {
+        await api.updateProduct(editingProduct.id, productData);
+      } else {
+        // Provide a unique ID from frontend if backend allows
+        productData.id = uuidv4();
+        await api.createProduct(productData);
+      }
+      onProductChange();
+      setIsModalOpen(false);
+    } catch (error) {
+      console.error('Failed to save product:', error);
+      alert(`Error: ${error.response?.data?.message || error.message || 'Failed to save product'}`);
     }
-    onProductChange();
-    setIsModalOpen(false);
   };
 
   return (
