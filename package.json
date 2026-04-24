@@ -1,5 +1,5 @@
 {
-  "name": "scanventory",
+  "name": "inventro",
   "version": "1.0.0",
   "description": "A simple inventory management system with barcode scanning.",
   "main": "backend/index.js",
