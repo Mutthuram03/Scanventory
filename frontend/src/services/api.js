@@ -2,7 +2,7 @@ import axios from 'axios';
 import { auth } from '../firebase/config';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000', // Adjusted to match backend port
+  baseURL: '/api', 
   headers: {
     'Content-Type': 'application/json'
   }
