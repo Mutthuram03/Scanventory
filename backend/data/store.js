@@ -10,4 +10,10 @@ const db = new Low(adapter, defaultData);
 
 await db.read();
 
+// Ensure db.data is initialized with default structure if it's null or missing keys
+db.data ||= defaultData;
+db.data.products ||= [];
+db.data.logs ||= [];
+db.data.profiles ||= {};
+
 export default db;
