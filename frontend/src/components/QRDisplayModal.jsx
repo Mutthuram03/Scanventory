@@ -49,7 +49,7 @@ const QRDisplayModal = ({ product, isOpen, onClose }) => {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-sm bg-white rounded-[2rem] shadow-2xl overflow-hidden"
+            className="relative w-full max-w-md bg-white rounded-[2.5rem] shadow-2xl overflow-hidden"
           >
             <div className="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
               <div className="flex items-center gap-3">
@@ -67,10 +67,10 @@ const QRDisplayModal = ({ product, isOpen, onClose }) => {
             </div>
 
             <div className="p-10 flex flex-col items-center">
-              <div ref={qrRef} className="p-6 bg-white rounded-3xl border-2 border-slate-100 shadow-inner mb-6">
+              <div ref={qrRef} className="p-8 bg-white rounded-[2rem] border-2 border-slate-100 shadow-inner mb-6">
                 <QRCodeSVG 
                   value={encodeProductQR(product)} 
-                  size={200}
+                  size={280}
                   level="H"
                   includeMargin={false}
                 />
