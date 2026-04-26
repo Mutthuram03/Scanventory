@@ -1,4 +1,4 @@
-# 📦 Inventro
+# Inventro
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -8,17 +8,17 @@
 
 **Inventro** is a premium, full-stack inventory management solution designed for modern warehouses and retail operations. It combines high-end aesthetics with powerful barcode scanning capabilities to eliminate manual entry errors and provide real-time visibility into stock operations.
 
-## ✨ Features
+##  Features
 
-- 📊 **Dynamic Dashboard**: Real-time visualization of stock levels, low-stock alerts, and recent transaction activities.
-- 📦 **Product Catalog**: Full CRUD operations for managing products with detailed categorization and pricing.
-- 🔍 **Smart Scanning**: Seamlessly process stock-in and stock-out operations using any barcode or QR code scanner.
-- 📜 **Transaction History**: Comprehensive logs of every movement within your inventory for full auditability.
-- 👤 **Profile Management**: Customizable manager profiles with industry-specific settings.
-- 🔐 **Enterprise Security**: Secure authentication powered by Firebase, with backend token verification.
-- 🎨 **Premium UI/UX**: A modern, responsive interface built with glassmorphism, vibrant gradients, and smooth Framer Motion animations.
+- **Dynamic Dashboard**: Real-time visualization of stock levels, low-stock alerts, and recent transaction activities.
+- **Product Catalog**: Full CRUD operations for managing products with detailed categorization and pricing.
+- **Smart Scanning**: Seamlessly process stock-in and stock-out operations using any barcode or QR code scanner.
+- **Transaction History**: Comprehensive logs of every movement within your inventory for full auditability.
+- **Profile Management**: Customizable manager profiles with industry-specific settings.
+- **Enterprise Security**: Secure authentication powered by Firebase, with backend token verification.
+- **Premium UI/UX**: A modern, responsive interface built with glassmorphism, vibrant gradients, and smooth Framer Motion animations.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Framework**: React.js (Vite)
@@ -33,7 +33,7 @@
 - **Database**: Lowdb (JSON-based local storage)
 - **Security**: Firebase Admin SDK for JWT verification
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -77,7 +77,7 @@ The application will be available at:
 - **Frontend**: [http://localhost:5173](http://localhost:5173)
 - **Backend API**: [http://localhost:5000](http://localhost:5000)
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Inventro/
@@ -97,7 +97,7 @@ Inventro/
 └── package.json        # Main project configuration
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
 
